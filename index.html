@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050a14">
+<title>Happy Birthday! | Star Stream</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars" aria-hidden="true"></div>
+
+<!-- BOOT SEQUENCE -->
+<div id="boot" role="button" tabindex="0" aria-label="Skip intro">
+  <div class="boot-inner">
+    <p id="bootText"></p>
+    <small>[ click anywhere to skip ]</small>
+  </div>
+</div>
+
+<header class="top-bar">
+  <a href="#" class="logo">STAR STREAM</a>
+  <span class="hud">
+    <span><i class="dot"></i> <b id="viewers">0</b> constellations watching</span>
+    <span class="coins">✦ <b id="coinCount">0</b> coins</span>
+  </span>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <p class="tag">[ MAIN SCENARIO #1 ]</p>
+    <h1>HAPPY<br><span>BIRTHDAY</span></h1>
+    <p class="hero-sub">Clear condition: <em>survive another year and enjoy it.</em></p>
+    <p class="hero-sub dim">Failure penalty: none. The constellations insist.</p>
+    <button class="btn" id="surpriseButton">ACCEPT SCENARIO</button>
+    <p class="scroll-hint">▾ SCROLL TO READ THE STORY ▾</p>
+  </section>
+
+  <!-- SCENARIO WINDOW -->
+  <section class="win reveal" aria-labelledby="sc-title">
+    <div class="win-head">
+      <span class="win-icon">!</span>
+      <div><p class="label">MAIN SCENARIO</p><h2 id="sc-title">Birthday Celebration</h2></div>
+      <span class="state">IN PROGRESS</span>
+    </div>
+    <div class="win-body">
+      <p class="row"><span>Category</span> Main Scenario (Hidden)</p>
+      <p class="row"><span>Difficulty</span> ★☆☆☆☆ (EX-Grade easy)</p>
+      <p class="row"><span>Clear Condition</span> Enjoy your special day</p>
+      <p class="row"><span>Time Limit</span> 24 hours</p>
+      <p class="row"><span>Reward</span> Happiness, cake, 1 real-life gift</p>
+      <p class="row"><span>Failure</span> Not possible</p>
+      <p class="foot">May the probability always be in your favor.</p>
+    </div>
+  </section>
+
+  <!-- STATUS WINDOW -->
+  <section class="win reveal" aria-labelledby="st-title">
+    <div class="win-head">
+      <span class="win-icon">◈</span>
+      <div><p class="label">CONSTELLATION INFORMATION</p><h2 id="st-title">Monarch of Capricious Chaos</h2></div>
+      <span class="state">MYTH-GRADE</span>
+    </div>
+    <div class="win-body">
+      <p class="row"><span>Constellation</span> Myth-Grade Constellation</p>
+      <p class="row"><span>Exclusive Attribute</span> Birthday Protagonist</p>
+      <div class="stats">
+        <div><span>Stamina</span><i data-v="82"></i></div>
+        <div><span>Strength</span><i data-v="64"></i></div>
+        <div><span>Agility</span><i data-v="71"></i></div>
+        <div><span>Magic Power</span><i data-v="97"></i></div>
+        <div><span>Chaos</span><i data-v="100"></i></div>
+      </div>
+      <p class="row"><span>Skill</span> Fourth Wall Lv. MAX <em>(you break it daily)</em></p>
+      <p class="row"><span>Skill</span> Omniscient Birthday Viewpoint Lv. 1</p>
+    </div>
+  </section>
+
+  <!-- CONSTELLATION FEED -->
+  <section class="feed-section reveal">
+    <p class="tag">[ INDIRECT MESSAGES ]</p>
+    <h2>The Constellations <span>Are Watching</span></h2>
+    <div class="feed" id="feed" aria-live="polite"></div>
+  </section>
+
+  <!-- LETTER -->
+  <section class="letter-section reveal" id="letter">
+    <p class="tag">[ A MESSAGE JUST FOR YOU ]</p>
+    <h2>A Letter From Your <span>Companion</span></h2>
+    <article class="win letter">
+      <div class="win-head"><span class="label">PRIVATE MESSAGE</span><span class="state">✧</span></div>
+      <div class="win-body letter-body">
+        <p class="hl">Happy Birthday! 🎂</p>
+        <p>No matter what challenges appear along your journey, remember that you are capable of overcoming more than you realize. Show them what a Myth-Grade Constellation can do.</p>
+        <p>Thank you for being you. I hope your birthday is filled with love, good memories, and all the things that make you happy. You deserve wonderful things, today and always.</p>
+        <p class="sign">Sincerely yours,<br><span>-Descendant of the Stars ✦</span></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section reveal">
+    <p class="tag">[ MEMORY ARCHIVE ]</p>
+    <h2>Fragments of <span>Our Story</span></h2>
+    <p class="muted">Every memory is a little universe of its own.</p>
+    <div class="gallery">
+      <figure class="photo"><div class="frame"><img src="photo1.jpg" alt="A favorite memory"><span class="ph">✧ Add photo1.jpg</span></div><figcaption>Memory Fragment 01</figcaption></figure>
+      <figure class="photo"><div class="frame"><img src="photo2.jpg" alt="A special moment"><span class="ph">✧ Add photo2.jpg</span></div><figcaption>Memory Fragment 02</figcaption></figure>
+      <figure class="photo"><div class="frame"><img src="photo3.jpg" alt="A wonderful memory"><span class="ph">✧ Add photo3.jpg</span></div><figcaption>Memory Fragment 03</figcaption></figure>
+    </div>
+    <p class="muted small">Couldn't find more photos of us together lmao</p>
+  </section>
+
+  <!-- WISH -->
+  <section class="wish-section reveal">
+    <div class="wish-symbol">✧</div>
+    <p class="tag">[ FINAL MISSION ]</p>
+    <h2>Make a <span>Wish</span></h2>
+    <p>I'm giving u all my spare luck this time dw twin.</p>
+    <button class="btn" id="wishButton">COMPLETE SCENARIO ✦</button>
+    <p id="wishMessage" class="wish-message" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer>
+  <p>✦ MAIN SCENARIO #1 CLEARED ✦</p>
+  <p>Made with love, just for you.</p>
+</footer>
+
+<!-- BONUS GIFT -->
+<div id="bonusGiftOverlay" class="bonus-overlay" aria-hidden="true">
+  <div class="white-flash"></div>
+  <div class="bonus-particles" id="bonusParticles"></div>
+  <div class="win bonus-card" role="dialog" aria-modal="true" aria-labelledby="bonusTitle">
+    <div class="bonus-icon">🎁</div>
+    <p class="label">[ HIDDEN REWARD DISCOVERED ]</p>
+    <h2 id="bonusTitle">BONUS GIFT<br><span>UNLOCKED!</span></h2>
+    <p class="divider">✦ ━━━━━━━━━ ✦</p>
+    <p class="bonus-desc">Congratulations, Monarch of Capricious Chaos. You have cleared the birthday scenario.</p>
+    <div class="reward">
+      <p class="label">SPECIAL REWARD</p>
+      <p class="reward-name">One Real-Life Gift</p>
+      <p class="reward-detail">This reward cannot be claimed through the system. Please meet your friendly sponsor in real life to receive your bonus gift.</p>
+    </div>
+    <p class="bonus-footer">[ REWARD STATUS: AVAILABLE FOR CLAIM ]</p>
+    <button id="claimGiftButton" class="btn">CLAIM!</button>
+    <p class="muted small">— Descendant of the Stars ✧</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
