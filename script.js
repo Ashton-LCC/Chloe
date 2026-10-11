@@ -246,7 +246,7 @@ if (surprise) {
         surprise.getBoundingClientRect().bottom + window.scrollY;
 
       window.scrollTo({
-        top: Math.max(0, buttonPosition - 100),
+        top: Math.max(0, buttonPosition - 50),
         behavior: "smooth"
       });
     }, 400);
