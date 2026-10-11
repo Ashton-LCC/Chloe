@@ -62,7 +62,7 @@ async function runBoot() {
 
   const lines = [
     "Connecting to the Star Stream...",
-    "Verifying incarnation... OK",
+    "Verifying Constellation... OK",
     "Loading the story of this world...",
     "",
     "A hidden scenario has arrived."
